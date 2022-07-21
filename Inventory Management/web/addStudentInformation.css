@@ -1,0 +1,66 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 12-Apr-2022, 9:44:58 pm
+    Author     : anand
+*/
+
+input[type=text], [type=email] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid blue;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus, [type=email]:focus {
+    width: 20%;
+}
+
+h1{
+    color: orange;
+    /*text-shadow: 2px 2px 5px black;*/
+    font-family: 'Droid serif', serif;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 44px;
+    margin: 0 0 12px;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    /*border-top-left-radius:25px;*/
+    border-top-right-radius:25px;
+    /*border-bottom-right-radius:25px;*/
+    border-bottom-left-radius:25px;
+}
+
+.button2 {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+}
+
+.button2:hover {
+    background-color: #008CBA;
+    color: white;
+}

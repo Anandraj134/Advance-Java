@@ -1,0 +1,116 @@
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+h1{
+    color: orange;
+    text-shadow: 2px 2px 5px black;
+    font-family: 'Droid serif', serif;
+    font-size: 40px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 44px;
+    margin: 0 0 12px;
+}
+
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid blue;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 20%;
+}
+
+.buttonfx{
+    color: black; /* button text color */
+    outline: none;
+    background: transparent;
+    border: none;
+    border-bottom: 4px solid #eee;
+    letter-spacing: 0.0625em;
+    padding: 8px 10px;
+    text-transform: uppercase;
+    font: bold 16px 'Bitter', sans-serif; /* use google font */
+    line-height: 2;
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    text-decoration: none; /* remove underline if using A instead of BUTTON tag */
+    overflow: hidden;
+    transition: all .5s;
+}
+
+/* //// Default effect: Slide from Top  //// */
+
+.buttonfx:before,
+.buttonfx:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background: #259f6c; /* onhover background color */
+    z-index: -1;
+    transform: translate3D(0,-100%,0); /* move elements above button so they don't appear initially */
+    transition: all .5s;
+}
+
+.buttonfx:before{
+    background: #fafcd6; /* button default background color */
+    z-index: -2;
+    transform: translate3D(0,0,0);
+}
+
+.buttonfx:hover{
+    color: white;
+}
+
+.buttonfx:hover:after{
+    transform: translate3D(0,0,0);
+    transition: all .5s;
+}
+
+.slideleft:after{
+    top: 0;
+    z-index: -1;
+    transform: translate3D(-101%,0,0);
+}
+
+.slideleft:hover:after{
+    transform: translate3D(0,0,0);
+    transition: all .5s;
+}
+
+.bouncein:hover:before,
+.bouncein:hover:after{
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66) !important;
+}
